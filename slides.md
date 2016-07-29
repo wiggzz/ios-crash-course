@@ -5,10 +5,10 @@
 
 ## Topics
 * Swift 101
-* iOS components (Frameworks, TableViews, WebViews, etc...)
+* iOS components
 * Package Management
 * Testing
-* Tools - XCode
+* XCode
 * Provisioning and Deployment
 * Crash reporting and analytics
 
@@ -137,7 +137,7 @@ class Car {
 Then, later on we don't have to worry that the car might not have a make. We know if we have a car, it has a make.
 
 
-### Only EXTREMELY rarely should you need to force unwrap an optional
+### Only VERY rarely should you need to force unwrap an optional
 Really bad:
 ```swift
 class UserView {
@@ -409,14 +409,14 @@ All implementers of `CalorieConsumer` get `dailyCaloricEstimate()` for free.
 
 
 
-## iOS components
+# iOS components
 
 
 * The View Hierarchy
 * The delegate pattern
 * UITableView
 * UIStackView
-* UIWebView
+* UINavigationController
 * AutoLayout
 
 
@@ -536,8 +536,7 @@ let navigationController = UINavigationController(rootViewController: viewContro
 // after rendering, viewController will be shown inside navigationController
 
 let secondViewController = UIViewController()
-navigationController
-  .pushViewController(secondViewController, animated: true)
+navigationController.pushViewController(secondViewController, animated: true)
 // now, after rendering secondViewController will be displayed
 
 navigationController.popViewController(true)
@@ -612,18 +611,18 @@ Now, the child will have the same edges as the parent
 
 
 
-## Package Management
+# Package Management
 Cocoapods v Carthage
 
 
-### Cocoapods
+## Cocoapods
 * Works with all versions of iOS
 * Written in Ruby
 * Integrates tightly with XCode - (it creates a workspace for you)
 * Centralized package index at cocoapods.org
 
 
-### Carthage
+## Carthage
 * Works with iOS 8.0 and above
 * Written in Swift
 * Not tightly coupled to XCode
@@ -636,7 +635,7 @@ Carthage is probably the way of the future, but I've used cocoapods most, and it
 ### List of great libraries
 * PromiseKit
 * Quick / Nimble (test and BDD expectations framework)
-* ReactiveKit
+* ReactiveKit (used to be Bond)
 * Cartography (autolayout library)
 * SwiftyJSON
 * OAStackView (as a backfill for UIStackView)
@@ -779,7 +778,6 @@ Fastlane is probably the best and most widely used tool - it can handle most asp
 
 
 # Crash reporting and analytics
-You will want to know how much your app is crashing in the wild.
 
 
 ## How crash reporting works
@@ -798,6 +796,12 @@ There, the binary stack trace is matched with the source code (via a process cal
 Apple provides some built in functionality, but I have not used it, so I don't know how good it is.
 
 Other tools include  Crashlytics, Splunk, and many others. Crashlytics is probably the most widely used (it's from Twitter)
+
+
+## Analytics
+
+* Google Tag Manager
+* Mixpanel
 
 
 
