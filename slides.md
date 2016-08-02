@@ -422,7 +422,7 @@ All implementers of `CalorieConsumer` get `dailyCaloricEstimate()` for free.
 
 ## The View Hierarchy
 
-![](/images/ios-view-hierarchy.svg)
+![](images/ios-view-hierarchy.svg)
 
 
 Each view can have zero or more subviews.
@@ -433,7 +433,7 @@ A ViewController has a view but is not part of the view hierarchy. It is respons
 ## The Delegate Pattern
 Most of the iOS components use the delegate pattern to pass control from a view back to the view controller.
 
-![](/images/ios-delegate-pattern.svg)
+![](images/ios-delegate-pattern.svg)
 
 
 A view may use the delegate pattern to obtain more information from it's controller or notify the controller of events.
@@ -442,7 +442,7 @@ A view may use the delegate pattern to obtain more information from it's control
 ## UITableView
 UIVableView is just a vertically scrollable stack of cells.
 
-![](/images/tableview.svg)
+![](images/tableview.svg)
 
 
 The UITableView is at the core of most native iOS apps. It's highly performant - but that performance comes at a cost - its a bit difficult to use.
@@ -526,7 +526,7 @@ class MyController : UIViewController {
 
 ## UINavigationController
 
-![](/images/navigation-controller.png)
+![](images/navigation-controller.png)
 
 
 ### For Example
@@ -695,7 +695,7 @@ class StubCoffeeService : CoffeeService {
 ## Application Structure for Testability
 
 
-![](/images/ios-mvvm.svg)
+![](images/ios-mvvm.svg)
 
 
 ## Continuous Integration
@@ -767,7 +767,7 @@ It may seem painful at first, but you get:
 # Provisioning and Deployment
 
 
-![](/images/signing-process.svg)
+![](images/signing-process.svg)
 
 
 ## There are tools to help you automate the signing and deployment process
@@ -783,7 +783,7 @@ Fastlane is probably the best and most widely used tool - it can handle most asp
 ## How crash reporting works
 
 
-![](/images/ios-crash-reporting.svg)
+![](images/ios-crash-reporting.svg)
 
 
 When an app crashes, iOS deposits a crash log (including a binary __stack trace__) on the device.
